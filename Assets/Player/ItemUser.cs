@@ -6,10 +6,10 @@ public class ItemUser : MonoBehaviour
 
     [SerializeField] private ItemCollector itemCollector;
 
-    private void OnEnable()
+    private void OnEnable()//オブジェクトがあるとき
     {
         if (itemCollector != null)
-            itemCollector.OnItemCollected += UseItem;
+            itemCollector.OnItemCollected += UseItem;//通知された時に処理をする
     }
 
     private void OnDisable()
