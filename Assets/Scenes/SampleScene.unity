@@ -131,28 +131,15 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 125688445}
-  - component: {fileID: 125688444}
+  - component: {fileID: 125688446}
+  - component: {fileID: 125688447}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &125688444
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 125688443}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efdabcea41eda9e46898836852ec643f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 1525340006}
-  itemData: {fileID: 11400000, guid: 644c6d0caed92454db657c0574ff7629, type: 2}
+  m_IsActive: 1
 --- !u!4 &125688445
 Transform:
   m_ObjectHideFlags: 0
@@ -168,6 +155,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &125688446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 125688443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14ffdfdfa2f232146a0fca6db9019363, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collector: {fileID: 1693883106}
+  combiner: {fileID: 1693883107}
+--- !u!114 &125688447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 125688443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac4d06853e1957b4b97f32e37854ec3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemCollector: {fileID: 1693883106}
 --- !u!1 &311473281
 GameObject:
   m_ObjectHideFlags: 0
@@ -2053,7 +2067,7 @@ GameObject:
   - component: {fileID: 1525340007}
   - component: {fileID: 1525340006}
   - component: {fileID: 1525340005}
-  - component: {fileID: 1525340004}
+  - component: {fileID: 1525340008}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -2061,20 +2075,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1525340004
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1525340003}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ba9299a96a8b374988e2e639b50e4aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHp: 100
-  currentHp: 50
 --- !u!114 &1525340005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2155,6 +2155,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1525340008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1525340003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ba9299a96a8b374988e2e639b50e4aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHp: 100
+  currentHp: 50
 --- !u!1 &1535585510
 GameObject:
   m_ObjectHideFlags: 0
@@ -2373,6 +2387,7 @@ GameObject:
   - component: {fileID: 1693883104}
   - component: {fileID: 1693883103}
   - component: {fileID: 1693883106}
+  - component: {fileID: 1693883107}
   m_Layer: 0
   m_Name: pot
   m_TagString: Untagged
@@ -2502,6 +2517,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9596929069bd1924d9ac8209e61030d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1693883107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1693883102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bb9b006fb9e7d04386bd61e13cc0421, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1732042519
