@@ -1,22 +1,17 @@
-// === 2. ItemCollector クラス（アイテム収集の責務のみ） ===
+// アイテムを取得したことを通知するだけにする
+
 using UnityEngine;
+using System;
+
 public class ItemCollector : MonoBehaviour
 {
-    [SerializeField] private string playerTag = "Player";
+    public event Action<Item> OnItemCollected;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Item item = collision.GetComponent<Item>();
         if (item == null) return;
 
-        GameObject player = GameObject.FindWithTag(playerTag);
-        if (player == null) return;
-
-        // アイテム使用システムに処理を委譲
-        var itemUser = player.GetComponent<ItemUser>();
-        if (itemUser != null)
-        {
-            itemUser.UseItem(item);
-        }
+        OnItemCollected?.Invoke(item);
     }
 }
