@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: Apple
   m_EditorClassIdentifier: 
   itemName: Apple
-  icon: {fileID: 21300000, guid: dd3ddc03b7a07c141b9dcfbd5e2df263, type: 3}
+  itemSprite: {fileID: 21300000, guid: dd3ddc03b7a07c141b9dcfbd5e2df263, type: 3}
+  effect:
+    healAmount: 30
