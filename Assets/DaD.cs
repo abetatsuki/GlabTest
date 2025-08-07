@@ -10,6 +10,7 @@ public class DaD : MonoBehaviour
     private Camera _cam;          // メインカメラ参照（マウス座標変換用）
     private Vector3 _offset;      // ドラッグ開始時のマウスとオブジェクト位置の差分
     private bool _isDragging;     // ドラッグ中かどうかのフラグ
+ 
 
     /// <summary>
     /// ゲーム開始時にメインカメラを取得する

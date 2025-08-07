@@ -5,8 +5,10 @@ public class ItemData : ScriptableObject
 {
     [Header("基本情報")]
     public string itemName;
-    public Sprite icon;
+    public Sprite itemSprite; // ← 追加！
 
     [Header("エフェクト設定")]
     public HealEffect effect = new HealEffect();
+  
+   
 }
