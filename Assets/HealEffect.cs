@@ -1,5 +1,5 @@
 using UnityEngine;
-
+[System.Serializable]
 public class HealEffect : IEffect
 {
     public float healAmount;
