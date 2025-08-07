@@ -2,6 +2,22 @@
 using UnityEngine;
 public class ItemUser : MonoBehaviour
 {
+
+
+    [SerializeField] private ItemCollector itemCollector;
+
+    private void OnEnable()
+    {
+        if (itemCollector != null)
+            itemCollector.OnItemCollected += UseItem;
+    }
+
+    private void OnDisable()
+    {
+        if (itemCollector != null)
+            itemCollector.OnItemCollected -= UseItem;
+    }
+
     public void UseItem(Item item)
     {
         if (item == null)
@@ -33,3 +49,5 @@ public class ItemUser : MonoBehaviour
         item.ConsumeItem();
     }
 }
+
+
